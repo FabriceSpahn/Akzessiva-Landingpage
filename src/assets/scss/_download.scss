@@ -1,0 +1,119 @@
+
+//  -----------------------------
+//  Download
+//  -----------------------------
+.section-download{
+  z-index: 10;
+  background-color: $bg-color-black;
+  border-top: 1px solid $color-grey;
+
+  padding-top: 140px;
+  padding-bottom: 140px;
+
+  .download-container{
+
+    .akzessiva{
+      z-index: -10;
+      padding-bottom: 80px;
+      color:white;
+      font-size: 4rem;
+      text-align: center;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .fork-me{
+      @include breakpoint(small only) {
+        @include xy-cell(12);
+      }
+
+      @include xy-cell(5.5);
+      color: white;
+      @include xy-grid-container;
+
+      .button-container{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        .button {
+          width: 60%;
+          height: 55px;
+          margin-top: 60px;
+          position: relative;
+          border-radius: 2px;
+          appearance: none;
+          background: $color-highlight;
+          padding: 1em 2em;
+          border: none;
+          color: white;
+          font-size: 1.2em;
+          cursor: pointer;
+          outline: none;
+          overflow: hidden;
+          margin-bottom: 0;
+
+          img{
+            position: relative;
+            top:50%;
+            transform: translateY(-50%);
+            width:29px;
+          }
+
+          &::before {
+            --size: 0;
+
+            content: '';
+            position: absolute;
+            left: var(--x);
+            top: var(--y);
+            width: var(--size);
+            height: var(--size);
+            background: radial-gradient(circle closest-side, rgb(18, 0, 180), transparent);
+            transform: translate(-50%, -50%);
+            transition: width .2s ease, height .2s ease;
+          }
+
+          &:hover::before {
+            --size: 600px;
+          }
+
+          &:hover{
+             background: #1708CB;
+          }
+        }
+
+        p{
+          padding-top: 20px;
+          text-align: center;
+          margin-bottom: 0;
+        }
+
+      }
+
+      .font-family{
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+
+        .right-content{
+          text-align: right;
+          margin-top: 16px;
+        }
+
+        .left-content{
+          float: left;
+          margin-top: 16px;
+        }
+      }
+
+      .license{
+        padding-top: 40px;
+        color: $color-grey;
+
+        p{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

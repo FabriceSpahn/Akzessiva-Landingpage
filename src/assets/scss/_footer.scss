@@ -1,0 +1,200 @@
+
+//  -----------------------------
+//  footer
+//  -----------------------------
+.footer{
+  background-color: $color-white;
+  height: 85px;
+  position: relative;
+
+  .footer-component{
+    @include xy-grid-container;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .footer-logo{
+      @include breakpoint(small only) {
+        @include xy-cell(1);
+      }
+
+      @include xy-cell(1);
+
+      svg{
+        height:28px;
+        width: 28px;
+        fill: $color-black;
+        transition: 0.5s;
+        cursor: pointer;
+
+        &:hover{
+          fill: $color-highlight;
+        }
+      }
+    }
+
+
+    .impressum{
+      @include breakpoint(small only) {
+        @include xy-cell(3);
+        @include xy-cell-offset(5);
+      }
+
+      @include xy-cell(1);
+      @include xy-cell-offset(9);
+
+      position: relative;
+      z-index: 10;
+      float: left;
+      padding-left: 0px;
+      transition: 0.5s;
+
+      a{
+        cursor: pointer;
+        color: $color-black;
+        transition: 0.5s;
+      }
+
+      &:after {
+        content: '→';
+        position: absolute;
+        opacity: 0;
+        top: 0px;
+        left: -20px;
+        transition: 0.5s;
+      }
+
+      &:hover{
+        padding-left: 20px;
+
+        a{
+          color: $color-highlight;
+        }
+
+        &:hover:after {
+          opacity: 1;
+          left: 0px;
+        }
+      }
+
+    }
+    .privacy{
+      @include xy-cell(1);
+      position: relative;
+      z-index: 10;
+      float: left;
+      padding-left: 0px;
+      transition: 0.5s;
+
+      a{
+        cursor: pointer;
+        color: $color-black;
+        transition: 0.5s;
+      }
+
+      &:after {
+        content: '→';
+        position: absolute;
+        opacity: 0;
+        top: 0px;
+        left: -20px;
+        transition: 0.5s;
+      }
+
+      &:hover{
+        padding-left: 20px;
+
+        a{
+          color:$color-highlight;
+        }
+
+        &:hover:after {
+          opacity: 1;
+          left: 0px;
+        }
+      }
+
+    }
+  }
+
+
+  // .footer-component{
+  //   position: relative;
+  //   top:50%;
+  //   transform: translateY(-50%);
+  //   color: $color-black;
+  //
+  //
+  //   .footer-logo{
+  //     @include xy-cell(1);
+  //     // position: absolute;
+  //     // top:50%;
+  //     // transform: translateY(-50%);
+  //     // left: 0;
+  //
+  //     img{
+  //       height:24px;
+  //       width: 24px;
+  //     }
+  //   }
+  //
+  //   .footer-links{
+  //     @include xy-cell(1);
+  //     top:50%;
+  //     right: 0;
+  //
+  //     .impressum a{
+  //       @include xy-cell(1);
+  //       cursor: pointer;
+  //       color: $color-black;
+  //       transition: 0.5s;
+  //
+  //     }
+  //
+  //     .privacy{
+  //       @include xy-cell(1);
+  //
+  //       a{
+  //         cursor: pointer;
+  //         color: $color-black;
+  //         transition: 0.5s;
+  //       }
+  //     }
+  //
+  //
+  //   }
+  //
+  //
+  // }
+}
+
+
+
+
+// a{
+//   cursor: pointer;
+//   color: $color-black;
+//   transition: 0.5s;
+// }
+//
+// &:after {
+//   content: '→';
+// //position: absolute;
+//   opacity: 0;
+//   top:24px;
+//   left: -20px;
+//   transition: 0.5s;
+// }
+//
+// &:hover{
+//   padding-left: 20px;
+//
+//   a{
+//     color:$color-highlight;
+//   }
+//
+//   &:hover:after {
+//     opacity: 1;
+//     left: 0px;
+//   }
+// }
