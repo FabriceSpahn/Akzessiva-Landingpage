@@ -1,199 +1,116 @@
 //  -----------------------------
-//  edit
+//  About
 //  -----------------------------
-.edit{
-  border-bottom: 1px solid $bg-color-black;
-  border-top: 1px solid $bg-color-black;
-  background-color: $bg-color-white;
-  height: auto;
-  width: 100%;
+.section-about{
+  z-index: -15;
+  overflow: hidden;
   position: relative;
+  height: 100vh;
+  background-color: $bg-color-white;
 
-  .edit-container{
-    z-index: 0;
-    display: block;
-    height: auto;
-    width: 90%;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-    overflow: hidden;
-    padding: 180px 5% 180px;
-
-    h1{
-      font-size: 65px;
-      width: 100%;
-      text-align: center;
-      color: $bg-color-black;
-      -webkit-font-smoothing: antialiased;
-      font-kerning: normal;
-      transition: font-size 0.4s ease-out;
-    }
-  }
-
-  *[contenteditable="true"]{display: inline-block;}
-
-  //  -----------------------------
-  //  Selector
-  //  -----------------------------
-  .settings{
-    @include xy-grid-container;
-    position: relative;
-    top:20px;
+  .gradient-overlay{
+    width: 100%;
+    height: 0;
+    box-shadow: 0px 5px 60px 30px $bg-color-white;
+    position: absolute;
+    bottom: 0;
     z-index: 10;
-    font-size: $font-label-lg;
+  }
 
-    // style the selector
-    .selector{
-      position: relative;
-      width: 300px;
+  .about-container{
+    @include xy-grid-container;
+    z-index: 10 !important;
+    position: relative;
+    top: 68%;
+    transform: translateY(-50%);
 
-      .labeling{
-        @include breakpoint(small only) {
-          padding-right: 10px;
+    .about-text{
+      @include breakpoint(small only) {
+        @include xy-cell(12);
+
+   
+        p{
+          color: $color-black;
         }
 
-        line-height: 1.5;
-        padding: 5px;
-        padding-right: 20px;
-        float: left;
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
-        display: block;
-        white-space: nowrap;
-        margin-bottom: 0;
+       }
 
-      }
-
-      .selectorinput{
-        line-height: 1.5;
-        float: left;
-        width: 100px;
-        flex: 0 0 100px;
-
-        select{
-          font-size: $font-label-lg;
-          z-index: 20;
-          background-color: $bg-color-white;
-          height: auto;
-          padding: 5px;
-          margin-bottom: 0;
-          border-bottom: 1px solid $color-grey;
-          border-radius: 0;
-          border-left: 0px;
-          border-right: 0px;
-          padding-left: 0;
-          border-top: 0px;
-          //background-image: content:'a';
-          background-image:url('');
-
-          &:focus{
-            outline: none;
-            box-shadow: none;
-          }
-
-        }
-      }
-
-      &:after{
-        content: '←';
-        position: relative;
-        float: left;
-        padding: 5px;
-
-        right: 20px;
-        transition: 0.5s;
-      }
-    }
-
-
-    //  -----------------------------
-    //  Slider Styling
-    //  -----------------------------
-    .fontsize{
-      position: relative;
-
-      .labeling{
-        @include breakpoint(small only) {
-          padding-left: 10px;
-          padding-right: 10px;
-        }
-
-        line-height: 1.5;
-        padding: 5px;
-        padding-right: 20px;
-        padding-left: 30px;
-        float: left;
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
-        display: block;
-        white-space: nowrap;
-        margin-bottom: 0;
-      }
-
-      .sliderange{
-        @include breakpoint(small only) {
-        display: none;
-        }
-
-        display: block;
-        position: relative;
-        top: 50%;
-        transform: translateY(100%);
-        padding: 5px;
-        float: left;
-        width: 100px;
-
-        .slider{
-          margin: 0;
-          background-color: $color-grey;
-          height: 1px;
-
-          .slider-handle{
-            border-radius: 20px;
-            background-color: $bg-color-white;
-            border: 1px solid $color-black;
-            width: 1rem;
-            height: 1rem;
-
-            &:hover{
-              border: 1px solid $color-highlight;
-              background-color: $color-highlight;
-            }
-          }
-        }
-      }
-
-      .slideoutput{
-        width: auto;
-        line-height: 1.5;
-        padding: 5px;
-        padding-right: 20px;
-        float: left;
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
-        display: block;
-        white-space: nowrap;
-        margin-bottom: 0;
-
-
-        input{
-          background-color: $bg-color-white;
-          border: 0;
-
-
-          &:focus{
-            outline: none;
-            box-shadow: none;
-          }
-        }
-
-      }
+    @include xy-cell(6);
+    @include xy-cell-offset(3);
     }
 
   }
+
+    .about-image{
+      @include breakpoint(small only) {
+      z-index: -30 !important;
+      position: absolute;
+      right: 0px;
+      bottom: 20px;
+        }
+
+        z-index: -30 !important;
+        position: absolute;
+        right: -300px;
+        bottom: 50px;
+
+
+      .rellax{
+        @include breakpoint(small only) {
+          img{
+            width: 800px;
+          }
+
+
+           img{
+           width: 1200px;
+             }
+      }
+    }
+
+}
+}
+
+///////////////////////// Test Variable Font ////////////////////////
+
+h5{
+  position: absolute;
+  top: 40%;
+  transform: translate(0, -50%);
+  margin: 0;
+  width: 100%;
+  font-size: 130px;
+  font-family: "AkzessivaGX", BlinkMacSystemFont, sans-serif;
+  font-variation-settings: "wght" 700, "wdth" 150;
+  color: black;
+  white-space: nowrap;
+  text-align: center;
+  transition: font-variation-settings 250ms ease-out;
+
+  span {
+    font-family: "AkzessivaGX", BlinkMacSystemFont, sans-serif;
+    font-variation-settings: "wght" 100, "wdth" 150;
+    transition: all 250ms ease-out;
+  }
+
+  &:hover {
+    font-variation-settings: "wght" 0, "wdth" 0;
+    
+    span {
+      font-variation-settings: "wght" 700, "wdth" 150;
+    }
+  }
+// .animate{
+//   animation: animate 2s infinite alternate-reverse;
+// }
+
+// @keyframes animate {
+//   from{
+//     font-variation-settings: "wght" 0, "wdth" 0;
+//   }
+//   to{
+//     font-variation-settings: "wght" 700, "wdth" 500;
+//   }
+// }
+
 }

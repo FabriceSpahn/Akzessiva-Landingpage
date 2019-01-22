@@ -1,0 +1,92 @@
+.section-character{
+    z-index: 10;
+    background-color: $color-white;
+    color: $color-black;
+  
+  
+    .character-container{
+      @include breakpoint(small only) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+  
+      padding-top: 180px;
+      padding-bottom: 120px;
+      @include xy-grid-container;
+  
+      .styles-content{
+        @include breakpoint(small only) {
+        }
+        @include xy-cell(8);
+        //@include xy-cell-offset(2);
+
+        h2{
+            padding-bottom: 20px;
+        }
+  
+      
+      }// styles-content
+  
+  
+      .character-content{
+        @include breakpoint(small only) {
+          @include xy-cell(12);
+        }
+  
+        @include xy-cell(12);
+        //@include xy-cell-offset(2);
+  
+        .character-class{
+          padding-bottom: 60px;
+  
+          h3{
+            position: auto;
+            padding-bottom: 15px;
+          }
+  
+  
+          .preview{
+            display: inline-block;
+            width: 95px;
+            height: 95px;
+            border: solid 1px $color-black;
+            margin-right: -5px;
+            background-color: $color-white;
+            font-weight: 600;
+            color: $color-black;
+            position: relative;
+            font-size: 2em;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 5px;
+            -webkit-transition: all 75ms ease-in;
+            -webkit-transform: scale(1);
+            -ms-transition: all 75ms ease-in;
+            -ms-transform: scale(1);
+            -moz-transition: all 75ms ease-in;
+            -moz-transform: scale(1);
+            transition: all 75ms ease-in;
+            transform: scale(1);
+  
+  
+            &:hover{
+              background-color: $color-black;
+              border: solid 1px $color-black;
+              color: $color-white;
+              z-index: 20;
+              -webkit-transition: all 75ms ease-in;
+              -webkit-transform: scale(1.9);
+              -ms-transition: all 75ms ease-in;
+              -ms-transform: scale(1.9);
+              -moz-transition: all 75ms ease-in;
+              -moz-transform: scale(1.9);
+              transition: all 75ms ease-in;
+              transform: scale(1.9);
+            }
+          }
+        }// weight-class
+      }// weight-content
+  
+    }// weight-container
+  }// section-weight
+  
