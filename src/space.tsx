@@ -5,12 +5,13 @@ export interface SpaceProps {
 }
 
 export enum SpaceSize {
-	XS = 5,
-	S = 10,
-	M = 20,
-	L = 50,
-    XL = 100,
-    XXL = 150
+    XXS = 3,
+	XS = 6,
+	S = 15,
+	M = 30,
+	L = 60,
+    XL = 120,
+    XXL = 240
 }
 
 /**
