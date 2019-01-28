@@ -22,7 +22,7 @@ const StyledLogo = styled.div`
     width: 25px;
 `;
 
-const StyledLinks = styled.div`
+const StyledContent = styled.div`
     display: flex;
 `;
 
@@ -34,9 +34,9 @@ export const Footer: React.SFC<FooterProps> = props => {
                     <polygon points="85.04,28.35 85.04,0 28.35,0 0,28.35 0,113.39 28.35,113.39 28.35,85.04 56.69,85.04 85.04,56.69 28.35,56.69 28.35,28.35 "/>
                 </svg>
             </StyledLogo>
-            <StyledLinks>
+            <StyledContent>
                 {props.children}
-            </StyledLinks>
+            </StyledContent>
         </StyledFooter>
     )
 };

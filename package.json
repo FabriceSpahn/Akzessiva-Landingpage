@@ -1,7 +1,12 @@
 {
   "name": "akzessiva-website",
+  "description": "Website for Akzessiva Font",
   "version": "1.0.0",
   "main": "lib/index.js",
+  "alva": {
+    "name": "Akzessiva Website",
+    "color": "#000000"
+  },
   "scripts": {
     "start": "npm run build  -- -w",
     "build": "tsc",
@@ -18,5 +23,6 @@
     "@types/react": "^16.4.14",
     "react": "^16.5.1",
     "tslib": "^1.7.0"
-  }
+  },
+  "homepage": "https://github.com/FabriceSpahn/Akzessiva-Landingpage/"
 }
